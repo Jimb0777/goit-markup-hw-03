@@ -1,8 +1,18 @@
 /* =========================
    Base
 ========================= */
-.nav-list {
-  margin-bottom: 16px;
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }
 
 body {
@@ -32,10 +42,22 @@ img {
 }
 
 .container {
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 1158px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /* =========================
@@ -43,9 +65,16 @@ img {
 ========================= */
 .page-header {
   background-color: #ffffff;
+  border-bottom: 1px solid #e7e9fc;
 }
 
-.logo {
+.header-wrap {
+  display: flex;
+  align-items: center;
+  height: 72px;
+}
+
+.logo-header {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -53,10 +82,16 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
+  margin-right: 76px;
 }
 
 .logo-accent {
   color: #2e2f42;
+}
+
+.nav-list {
+  display: flex;
+  gap: 40px;
 }
 
 .nav-link {
@@ -72,7 +107,13 @@ img {
 }
 
 .contacts {
+  margin-left: auto;
   font-style: normal;
+}
+
+.contacts-list {
+  display: flex;
+  gap: 40px;
 }
 
 .contacts-link {
@@ -80,6 +121,7 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  white-space: nowrap;
 }
 
 .contacts-link:hover,
@@ -92,11 +134,13 @@ img {
 ========================= */
 .hero {
   background-color: #2e2f42;
+  padding: 188px 0;
   text-align: center;
 }
 
 .hero-title {
   margin: 0 auto;
+  max-width: 496px;
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
@@ -105,16 +149,16 @@ img {
 }
 
 .hero-btn {
-  font-family: var(--font-family);
+  margin-top: 48px;
+  padding: 16px 32px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
   color: #ffffff;
   background-color: #4d5ae5;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
+  font-family: inherit;
 }
 
 .hero-btn:hover,
@@ -126,7 +170,7 @@ img {
    Sections
 ========================= */
 .section {
-  padding: 48px 0;
+  padding: 120px 0;
 }
 
 .section-alt {
@@ -134,7 +178,7 @@ img {
 }
 
 .section-title {
-  margin-bottom: 32px;
+  margin-bottom: 72px;
   text-align: center;
   font-weight: 700;
   font-size: 36px;
@@ -146,8 +190,13 @@ img {
 /* =========================
    Features
 ========================= */
+.club-list {
+  display: flex;
+  gap: 24px;
+}
+
 .club-item {
-  margin-bottom: 24px;
+  flex-basis: calc((100% - 72px) / 4);
 }
 
 .club-item .title {
@@ -168,12 +217,19 @@ img {
 /* =========================
    Team
 ========================= */
+.team-list {
+  display: flex;
+  gap: 24px;
+}
+
 .team-card {
+  flex-basis: calc((100% - 72px) / 4);
   background-color: #ffffff;
+  border-radius: 4px;
 }
 
 .team-meta {
-  padding: 16px;
+  padding: 32px 0;
   text-align: center;
 }
 
@@ -195,12 +251,25 @@ img {
 /* =========================
    Portfolio
 ========================= */
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 24px;
+}
+
 .portfolio-card {
-  margin-bottom: 32px;
+  flex-basis: calc((100% - 48px) / 3);
+  border: 1px solid #e7e9fc;
 }
 
 .portfolio-meta {
-  padding: 16px 0;
+  padding: 32px 16px;
+  border-top: 1px solid #e7e9fc;
+}
+
+.portfolio-card img {
+  display: block;
+  width: 100%;
 }
 
 .portfolio-name {
@@ -223,6 +292,7 @@ img {
 ========================= */
 .page-footer {
   background-color: #2e2f42;
+  padding: 100px 0;
 }
 
 .logo-footer {
@@ -235,8 +305,6 @@ img {
 
 .footer-text {
   margin-top: 16px;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
+  max-width: 264px;
   color: #f4f4fd;
 }
