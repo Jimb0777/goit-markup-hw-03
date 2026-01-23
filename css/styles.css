@@ -24,7 +24,8 @@ body {
   background-color: #ffffff;
 }
 
-ul {
+ul,
+ol {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -71,7 +72,6 @@ img {
 .header-wrap {
   display: flex;
   align-items: center;
-  height: 72px;
 }
 
 .logo-header {
@@ -95,6 +95,8 @@ img {
 }
 
 .nav-link {
+  display: block;
+  padding: 24px 0;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -117,6 +119,8 @@ img {
 }
 
 .contacts-link {
+  display: block;
+  padding: 24px 0;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -226,8 +230,6 @@ img {
   flex-basis: calc((100% - 72px) / 4);
   background-color: #ffffff;
   border-radius: 4px;
-  background: #fff;
-  border-radius: 4px;
   box-shadow:
     0px 4px 4px rgba(0, 0, 0, 0.15),
     0px 1px 6px rgba(0, 0, 0, 0.12);
@@ -247,6 +249,7 @@ img {
 }
 
 .team-role {
+  margin-top: 8px;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -269,11 +272,9 @@ img {
 
 .portfolio-meta {
   padding: 32px 16px;
-  border-top: 1px solid #e7e9fc;
 }
 
 .portfolio-card img {
-  display: block;
   width: 100%;
 }
 
@@ -286,6 +287,7 @@ img {
 }
 
 .portfolio-type {
+  margin-top: 8px;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
