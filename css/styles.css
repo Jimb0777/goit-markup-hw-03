@@ -324,3 +324,7 @@ img {
   max-width: 264px;
   color: #f4f4fd;
 }
+
+.visually-hidden.section-title {
+  margin-bottom: 0;
+}
